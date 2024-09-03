@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full">
+    <div className="fixed z-[99] w-full">
       <nav className="bg-white border-gray-200 py-2.5">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
           <a href="#" className="flex items-center">
@@ -131,8 +131,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <Link to={"/about"}
-                  href="#"
+                <Link to={"/"}
                   className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#3373a0] lg:p-0"
                 >
                   About Us
