@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ThemeMode from "./ThemeMode";
 import DropDown from "./DropDown";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" w-full">
+    <div className="fixed w-full">
       <nav className="bg-white border-gray-200 py-2.5">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
           <a href="#" className="flex items-center">
@@ -73,23 +74,23 @@ const Navbar = () => {
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               {/* Add your menu items here */}
               <li>
-                <a
+                <Link to={"/"}
                   href="#"
                   className="block py-2 pl-3 pr-4 text-white bg-[#3373a0] rounded lg:bg-transparent lg:text-[#3373a0] lg:p-0"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
             
                 <li className=" py-2 pl-3 lg:p-0 pr-4 lg:bg-transparent lg:border-0 border-b">
                   <DropDown buttonLabel="Tools" widthClass="w-64">
-                    <a
+                    <Link to={"/image-generate"}
                       className="flex rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
                       role="menuitem"
                     >
                       Generate Image
-                    </a>
+                    </Link>
                     <a
                       className="flex rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
                       role="menuitem"
@@ -130,20 +131,19 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
+                <Link to={"/about"}
                   href="#"
                   className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#3373a0] lg:p-0"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link to={"/contact"}
                   className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#3373a0] lg:p-0"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -154,12 +154,11 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link to={"/login"}
                   className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#3373a0] lg:p-0"
                 >
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
